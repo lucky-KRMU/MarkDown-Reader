@@ -5,7 +5,7 @@ import {
   Upload, FileText, Moon, Sun, Coffee, Eye, EyeOff, Layout, Type, 
   Search, Copy, Check, Info, Lightbulb, AlertCircle, AlertTriangle, 
   ShieldAlert, Trash2, BookOpen, Compass, ExternalLink, ChevronLeft, 
-  Maximize, Minimize, X, List, Sparkles, Files, Sliders
+  Maximize, Minimize, X, List, Sparkles, Files, Sliders, Scroll
 } from 'lucide-react';
 import { sampleMarkdown } from '../../sampleMarkdown';
 
@@ -764,6 +764,17 @@ function MainBody({ theme, setTheme }) {
                       title="Nord Mode"
                     >
                       <Compass size={14} />
+                    </button>
+                    <button 
+                      onClick={() => setTheme('medieval')}
+                      className={`p-1.5 rounded-md cursor-pointer transition-all ${
+                        theme === 'medieval' 
+                          ? 'bg-[var(--accent)] text-white shadow-sm' 
+                          : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                      }`}
+                      title="Medieval Parchment"
+                    >
+                      <Scroll size={14} />
                     </button>
                   </div>
 
