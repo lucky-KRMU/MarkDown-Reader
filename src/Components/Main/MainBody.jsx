@@ -5,7 +5,7 @@ import {
   Upload, FileText, Moon, Sun, Coffee, Eye, EyeOff, Layout, Type, 
   Search, Copy, Check, Info, Lightbulb, AlertCircle, AlertTriangle, 
   ShieldAlert, Trash2, BookOpen, Compass, ExternalLink, ChevronLeft, 
-  Maximize, Minimize, X, List, Sparkles, Files
+  Maximize, Minimize, X, List, Sparkles, Files, Sliders
 } from 'lucide-react';
 import { sampleMarkdown } from '../../sampleMarkdown';
 
@@ -991,6 +991,7 @@ function MainBody({ theme, setTheme }) {
                   type="file" 
                   ref={fileInputRef}
                   onChange={handleFileChange}
+                  onClick={(e) => e.stopPropagation()}
                   accept=".md,.txt,text/markdown,text/plain"
                   className="hidden"
                 />
