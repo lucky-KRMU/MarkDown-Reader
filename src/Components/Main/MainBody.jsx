@@ -127,7 +127,10 @@ const CodeBlock = ({ language, value }) => {
           )}
         </button>
       </div>
-      <pre className="p-4 m-0 overflow-x-auto text-sm leading-relaxed text-zinc-200 hide-scrollbar">
+      <pre 
+        style={{ backgroundColor: 'transparent' }}
+        className="p-4 m-0 overflow-x-auto text-sm leading-relaxed text-zinc-200 hide-scrollbar !bg-transparent"
+      >
         <code>{highlightCode(value, language)}</code>
       </pre>
     </div>
