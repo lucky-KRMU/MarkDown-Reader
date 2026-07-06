@@ -1,5 +1,5 @@
 import React from 'react'
-import { BookOpen, Sparkles } from 'lucide-react'
+import { BookOpen } from 'lucide-react'
 
 function Header() {
   return (
@@ -9,17 +9,13 @@ function Header() {
           <BookOpen size={20} className="stroke-[2.5]" />
         </div>
         <div>
-          <h1 className="text-lg md:text-xl font-black tracking-tight text-[var(--text-primary)] font-[Commissioner]">
+          <h1 className="text-lg md:text-xl font-black tracking-tight text-[var(--text-primary)] font-[Inter]">
             MarkDown <span className="text-[var(--accent)]">Reader</span>
           </h1>
           <p className="text-[9px] text-[var(--text-secondary)] font-bold uppercase tracking-widest -mt-0.5">
             Optimize &amp; Read Markdown Files
           </p>
         </div>
-      </div>
-      <div className="flex items-center gap-1.5 text-[var(--text-secondary)] font-bold text-[11px] bg-[var(--bg-primary)] px-3 py-1.5 rounded-xl border border-[var(--border-color)]">
-        <Sparkles size={12} className="text-amber-500" />
-        <span>Premium Viewer</span>
       </div>
     </header>
   )

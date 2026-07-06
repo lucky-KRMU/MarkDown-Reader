@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Fira+Code:wght@300..700&family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=MedievalSharp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Fira+Code:wght@300..700&family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=MedievalSharp&display=swap');
 @import "tailwindcss";
 
 /* Theme Definitions */
@@ -74,7 +74,7 @@
 
 /* Font Customizations */
 .font-sans-custom {
-  font-family: 'Commissioner', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .font-serif-custom {
