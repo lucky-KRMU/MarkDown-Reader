@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { 
-  Upload, FileText, Moon, Sun, Coffee, Eye, EyeOff, Layout, Type, 
+  Upload, FileText, Moon, Sun, Coffee, Type, 
   Search, Copy, Check, Info, Lightbulb, AlertCircle, AlertTriangle, 
   ShieldAlert, Trash2, BookOpen, Compass, ExternalLink, ChevronLeft, 
   Maximize, Minimize, X, List, Sparkles, Files, Sliders, Scroll
@@ -413,7 +413,7 @@ function MainBody({ theme, setTheme }) {
     if (!query || typeof text !== 'string') return text;
     
     // Regex escape
-    const escapedQuery = query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    const escapedQuery = query.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
     const parts = text.split(new RegExp(`(${escapedQuery})`, 'gi'));
     
     return parts.map((part, i) => 
@@ -549,7 +549,7 @@ function MainBody({ theme, setTheme }) {
   const searchMatchesCount = React.useMemo(() => {
     if (!searchQuery || !fileContent) return 0;
     try {
-      const escaped = searchQuery.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+      const escaped = searchQuery.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
       const matches = fileContent.match(new RegExp(escaped, 'gi'));
       return matches ? matches.length : 0;
     } catch {
