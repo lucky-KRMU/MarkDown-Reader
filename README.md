@@ -1,16 +1,78 @@
-# React + Vite
+# 🚀 MarkDown Reader
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A premium, distraction-free markdown viewing and optimization environment designed for developers, writers, and readers alike. It features customized typography, interactive navigation, multiple theme configurations, layout controls, and comprehensive GitHub-Flavored Markdown (GFM) formatting support.
 
-Currently, two official plugins are available:
+Developed with ❤️ by **Lucky Pawar**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🎨 Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Multiple Themes**: Toggle seamlessly between **Light**, **Dark**, **Sepia** (warm paper), and **Nord** (ocean slate) themes.
+- **Typography Controls**: Choose between *Sans-Serif*, *Serif*, and *Monospace* fonts, adjust font sizes, and line-spacing for the perfect reading comfort.
+- **Interactive Outline (Table of Contents)**: An automatically generated sidebar list based on your document's headers, complete with active scroll-spy highlighting for effortless navigation.
+- **Responsive Width**: Toggle between a centered reading pane (optimized for reading) and full-width layout.
+- **Syntax Highlighting**: Code blocks rendered with language-specific highlighting and a quick "Copy Code" button.
+- **Callout & Alert Blocks**: Full parsing of standard GitHub-style Markdown alerts (`[!NOTE]`, `[!TIP]`, `[!IMPORTANT]`, `[!WARNING]`, `[!CAUTION]`).
+- **Lists & Checklists**: Perfectly aligned bullet points, numbered lists, and interactive task checklists (`- [x]`, `- [ ]`).
+- **Styled Tables**: Responsive, styled tables with zebra-striping and clean hover effects.
+- **Local Storage Integration**: Remembers your preferred theme, font preferences, and options for persistent comfort across sessions.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🛠️ Technology Stack
+
+- **Framework**: [React 19](https://react.dev/) + [Vite 8](https://vite.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Markdown Parsing**: [react-markdown](https://github.com/remarkjs/react-markdown) + [remark-gfm](https://github.com/remarkjs/remark-gfm)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Linting**: [Oxlint](https://oxc.rs/docs/guide/usage/linter.html)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/lucky-KRMU/MarkDown-Reader.git
+   cd MarkDown-Reader
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Scripts
+
+- **Development Server**: Run the app locally with hot-module replacement:
+  ```bash
+  npm run dev
+  ```
+
+- **Production Build**: Compile the app for production:
+  ```bash
+  npm run build
+  ```
+
+- **Linting**: Run the linter to verify code quality:
+  ```bash
+  npm run lint
+  ```
+
+- **Deploy**: Deploy the application to GitHub Pages:
+  ```bash
+  npm run deploy
+  ```
+
+---
+
+## 👤 Developer / Author
+
+- **Lucky Pawar** - *Initial Work & Architecture*

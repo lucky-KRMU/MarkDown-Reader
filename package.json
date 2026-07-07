@@ -2,6 +2,7 @@
   "name": "mdreader",
   "private": true,
   "version": "0.0.0",
+  "author": "Lucky Pawar",
   "type": "module",
   "scripts": {
     "dev": "vite",
