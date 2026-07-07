@@ -5,7 +5,7 @@ import {
   Upload, FileText, Moon, Sun, Coffee, Type, 
   Search, Copy, Check, Info, Lightbulb, AlertCircle, AlertTriangle, 
   ShieldAlert, Trash2, BookOpen, Compass, ExternalLink, ChevronLeft, 
-  Maximize, Minimize, X, List, Sparkles, Files, Sliders, Scroll
+  Maximize, Minimize, X, List, Sparkles, Files, Sliders, Scroll, Palette
 } from 'lucide-react';
 import { sampleMarkdown } from '../../sampleMarkdown';
 
@@ -992,6 +992,50 @@ function MainBody({ theme, setTheme }) {
               onDragLeave={handleDragLeave}
               onDrop={handleDrop}
             >
+              {/* Floating Theme Switcher Button with Hover Menu */}
+              <div className="absolute top-6 right-6 z-30 group">
+                <button className="flex items-center gap-2 px-3 py-2 rounded-xl border border-[var(--border-color)] bg-[var(--bg-secondary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--accent)] transition-all cursor-pointer shadow-sm active:scale-95">
+                  <Palette size={15} />
+                  <span className="text-xs font-semibold">Change Theme</span>
+                </button>
+                
+                {/* Hover Menu */}
+                <div className="absolute right-0 top-full pt-2 w-44 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-200 origin-top-right">
+                  <div className="rounded-xl border border-[var(--border-color)] bg-[var(--bg-primary)] p-2 shadow-xl">
+                    <div className="text-[10px] font-bold text-[var(--text-secondary)] uppercase tracking-wider px-2 py-1 mb-1 border-b border-[var(--border-color)]">
+                      Select Theme
+                    </div>
+                    <div className="space-y-0.5">
+                      {[
+                        { id: 'light', name: 'Light', icon: Sun },
+                        { id: 'dark', name: 'Dark', icon: Moon },
+                        { id: 'sepia', name: 'Sepia', icon: Coffee },
+                        { id: 'nord', name: 'Nord', icon: Compass },
+                        { id: 'medieval', name: 'Medieval', icon: Scroll }
+                      ].map((t) => {
+                        const IconComponent = t.icon;
+                        return (
+                          <button
+                            key={t.id}
+                            onClick={() => setTheme(t.id)}
+                            className={`w-full text-left rounded-lg py-1.5 px-2 text-xs leading-relaxed font-semibold transition-all cursor-pointer flex items-center justify-between hover:bg-[var(--bg-secondary)] hover:text-[var(--accent)] ${
+                              theme === t.id 
+                                ? 'text-[var(--accent)] bg-[var(--toc-active-bg)] font-bold' 
+                                : 'text-[var(--text-secondary)]'
+                            }`}
+                          >
+                            <div className="flex items-center gap-2">
+                              <IconComponent size={13} />
+                              <span>{t.name}</span>
+                            </div>
+                            {theme === t.id && <div className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" />}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
               {/* Drag and Drop Box */}
               <div 
                 onClick={() => fileInputRef.current.click()}
